@@ -52,7 +52,7 @@ class MyHeader extends HTMLElement {
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="dashboard.html">
+							<a class="nav-link" href="order.html">
 								<span class="nav-icon">
 									<i class="fa-solid fa-gauge-high"></i>
 								</span>
