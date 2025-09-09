@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Hackathon 2025</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/portal.css">
   <link rel="stylesheet" href="assets/css/all.min.css">
@@ -76,8 +77,11 @@
       address: address,
       phone: phone,
       date: thaiDate,
+      order_status: 0,  
       items: items
     };
+
+    // order_status {0 = รอการยืนยัน, 1 = กำลังจัดเตรียม, 2 = จัดส่งแล้ว}
 
     // ส่งข้อมูล order ไปยังเซิร์ฟเวอร์ (ตัวอย่างใช้ fetch)
     fetch('http://54.169.154.143:3096/food-orders', {
@@ -99,6 +103,6 @@
         console.error('Error:', error);
         alert('เกิดข้อผิดพลาดในการสั่งซื้อ กรุณาลองใหม่อีกครั้ง');
       });
-      
+
   });
 </script>
