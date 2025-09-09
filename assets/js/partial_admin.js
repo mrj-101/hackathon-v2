@@ -51,6 +51,14 @@ class MyHeader extends HTMLElement {
 								<span class="nav-link-text">Dashboard</span>
 							</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="dashboard.html">
+								<span class="nav-icon">
+									<i class="fa-solid fa-gauge-high"></i>
+								</span>
+								<span class="nav-link-text">รายการสั่งซื้อ</span>
+							</a>
+						</li>
 
 					</ul>
 				</nav>

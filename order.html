@@ -55,7 +55,7 @@
 
 <script>
   document.getElementById('form-order').addEventListener('submit', function (e) {
-    e.preventDefault();
+    e.preventDefault(); //ป้องกันการทำงานปกติของฟอร์ม
     const name = document.getElementById('name').value.trim();
     const address = document.getElementById('address').value.trim();
     const phone = document.getElementById('phone').value.trim();
