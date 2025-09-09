@@ -61,7 +61,7 @@ function showDetail(id) {
         // Fill modal body with food details
         const modalBody = document.querySelector('#staticBackdrop .modal-body');
         modalBody.innerHTML = `
-        <img src="${food.image}" alt="${food.name}" class="img-fluid mb-3 rounded">
+        <img src="${food.image}" loading="lazy" alt="${food.name}" class="img-fluid mb-3 rounded">
         <h6 class="text-danger">ราคา ${food.price} บาท</h6>
         <h5>${food.name} (${food.name_en})</h5>
         <p>${food.description}</p><hr>
@@ -87,19 +87,19 @@ function renderFoods(foods) {
         let data = ``
         foods.forEach(f => {
             data += `
-              <div class="col col-6 col-md-3">
-                <div class="card h-100" style="width: 18rem;">
-                  <img src="${f.image}" class="card-img-top object-fit-cover" style="height: 240px;" alt="picture">
-                  <div class="card-body">
+              <div class="col col-12 col-md-6 col-lg-3">
+                <div class="card h-100 d-flex flex-column mx-auto" style="width: 18rem;">
+                  <img src="${f.image}" loading="lazy" class="card-img-top object-fit-cover" style="height: 240px;" alt="${f.name}">
+                  <div class="card-body d-flex flex-column">
                     <p class="card-text">
                       <strong>${f.name}</strong><br>
                       ${f.description}<br>
-                      <strong>Price: </strong> ${f.price} Baht
-                      <p class="mt-2 d-block text-center">
-                        <button class="btn btn-primary text-white" onclick="showDetail('${f.id}')">รายละเอียด</button>
-                        <button class="btn btn-secondary text-white" onclick="orderFood('${f.id}', '${f.name}', ${f.price})">สั่งอาหาร</button>
-                      </p>
+                      <strong>ราคา </strong> ${f.price} บาท
                     </p>
+                    <div class="mt-auto text-center mb-4">
+                      <button class="btn btn-primary text-white" onclick="showDetail('${f.id}')">รายละเอียด</button>
+                      <button class="btn btn-secondary text-white" onclick="orderFood('${f.id}', '${f.name}', ${f.price})">สั่งอาหาร</button>
+                    </div>
                   </div>
                 </div>
               </div>

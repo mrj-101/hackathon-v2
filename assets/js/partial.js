@@ -6,7 +6,6 @@ class MyHeader extends HTMLElement {
 			<div class="container-fluid py-2">
 				<div class="app-header-content">
 					<div class="row justify-content-between align-items-center">
-
 						<div class="col-auto">
 							<a id="sidepanel-toggler" class="sidepanel-toggler d-inline-block d-xl-none" href="#">
 								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img">
@@ -16,7 +15,6 @@ class MyHeader extends HTMLElement {
 								</svg>
 							</a>
 						</div><!--//col-->
-
 						<div class="search-mobile-trigger col">
 						<div class="row justify-content-between align-items-center">
 							<div class="col">
@@ -29,7 +27,6 @@ class MyHeader extends HTMLElement {
 							</div>
 						</div>
 						</div><!--//col-->
-
 					</div><!--//row-->
 				</div><!--//app-header-content-->
 			</div><!--//container-fluid-->
@@ -44,10 +41,8 @@ class MyHeader extends HTMLElement {
 					<a class="app-logo" href="index.html"><img class="logo-icon me-2" src="assets/images/app-logo.svg"
 							alt="logo"><span class="logo-text">Main Menu</span></a>
 				</div><!--//app-branding-->
-
 				<nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 					<ul class="app-menu list-unstyled accordion" id="menu-accordion">
-
 						<li class="nav-item">
 							<a class="nav-link" href="dashboard.html">
 								<span class="nav-icon">
@@ -56,7 +51,6 @@ class MyHeader extends HTMLElement {
 								<span class="nav-link-text">Dashboard</span>
 							</a>
 						</li>
-
 						<li class="nav-item">
 							<a class="nav-link" href="food.html">
 								<span class="nav-icon">
@@ -65,19 +59,8 @@ class MyHeader extends HTMLElement {
 								<span class="nav-link-text">Food</span>
 							</a>
 						</li>
-
-						<li class="nav-item">
-							<a class="nav-link" href="about.html">
-								<span class="nav-icon">
-									<i class="fa-solid fa-address-card"></i>
-								</span>
-								<span class="nav-link-text">เกี่ยวกับเรา</span>
-							</a>
-						</li>
-
 					</ul>
 				</nav>
-
 			</div>
 		</div>
 	</header>
