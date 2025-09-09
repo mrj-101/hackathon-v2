@@ -98,7 +98,7 @@ function renderFoods(foods) {
                     </p>
                     <div class="mt-auto text-center mb-4">
                       <button class="btn btn-primary text-white" onclick="showDetail('${f.id}')">รายละเอียด</button>
-                      <button class="btn btn-secondary text-white" onclick="orderFood('${f.id}', '${f.name}', ${f.price})">สั่งอาหาร</button>
+                      <button class="btn btn-secondary text-white" onclick="orderFood('${f.id}', '${f.name}', ${f.price})">ใส่ตะกร้า</button>
                     </div>
                   </div>
                 </div>

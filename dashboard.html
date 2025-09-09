@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Hackathon 2025</title>  
+  <title>Hackathon 2025</title>
   <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/portal.css">
@@ -11,13 +11,28 @@
 </head>
 
 <body class="app">
-
   <my-header></my-header>
 
   <div class="app-wrapper">
     <div class="app-content pt-3 p-md-3 p-lg-4">
       <div class="container-xl">
         <h1 class="text-center">Dashboard</h1>
+        <div class="row justify-content-start g-4 mt-3">
+
+          <div class="col col-12 col-md-4">
+            <div class="card mx-auto" style="width: 18rem;">
+              <div class="card-body text-center">
+                <i class="fas fa-utensils fa-2x mb-2 text-primary"></i>
+                <h5 class="card-title">จำนวนสินค้าในร้าน</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">ทั้งหมด</h6>
+                <p class="card-text" id="food-count">
+                </p>
+                <a href="food.html" class="card-link">ดูรายการอาหาร</a>
+              </div>
+            </div> <!-- จำนวนสินค้า -->
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -28,7 +43,7 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/dashboard.script.js"></script>
 </body>
 
 </html>
-

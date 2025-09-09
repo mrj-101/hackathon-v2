@@ -17,32 +17,39 @@
         <div class="app-content pt-3 p-md-3 p-lg-4">
             <div class="container-xl">
                 <h1 class="text-center">Dashboard</h1>
-                <div class="row g-4 mb-4">
-                    <div class="col-md-4">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
+                <div class="row justify-content-start g-4 mt-3">
+                    
+                    <div class="col col-12 col-md-4">
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <div class="card-body text-center">
                                 <i class="fas fa-utensils fa-2x mb-2 text-primary"></i>
-                                <h5 class="card-title">จำนวนเมนูอาหาร</h5>
-                                <p id="food-count" class="card-text fs-3">...</p>
-                                <a href="/food.html">click here</a>
+                                <h5 class="card-title">จำนวนสินค้าในร้าน</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">ทั้งหมด</h6>
+                                <p class="card-text" id="food-count">
+                                    <!--  -->
+                                </p>
+                                <a href="../food.html" class="card-link">ดูรายการอาหาร</a>
                             </div>
-                        </div>
+                        </div> <!-- จำนวนสินค้า -->
                     </div>
 
-                    <div class="col-md-4">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="fas fa-receipt fa-2x mb-2 text-warning"></i>
-                                <h5 class="card-title">ออเดอร์วันนี้</h5>
-                                <p id="order-count" class="card-text fs-3">...</p>
-                                <a href="order.html">click here</a>
+                    <div class="col col-12 col-md-4">
+                        <div class="card mx-auto" style="width: 18rem;">
+                            <div class="card-body text-center">
+                                <i class="fas fa-utensils fa-2x mb-2 text-primary"></i>
+                                <h5 class="card-title">จำนวนออร์เดอร์</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">ทั้งหมด</h6>
+                                <p class="card-text" id="order-count">
+                                    <!--  -->
+                                </p>
+                                <a href="order.html" class="card-link">ดูรายการออร์เดอร์</a>
                             </div>
-                        </div>
+                        </div> <!-- จำนวนสินค้า -->
                     </div>
-                </div> <!-- ปิด row -->
-            </div> <!-- ปิด container-xl -->
-        </div> <!-- ปิด app-content -->
-    </div> <!-- ปิด app-wrapper -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="../assets/js/partial_admin.js"></script>
     <script src="../assets/js/all.min.js"></script>
@@ -50,7 +57,7 @@
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/app.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script src="js/dashboard.script.js"></script>
+    <script src="../assets/js/dashboard.script.js"></script>
 </body>
 
 </html>

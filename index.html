@@ -10,14 +10,50 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="app">
+<body class="app bg-white">
 
   <my-header></my-header>
 
   <div class="app-wrapper">
     <div class="app-content pt-3 p-md-3 p-lg-4">
       <div class="container-xl">
-        <h1 class="text-center">Frontend Hackathon</h1>
+        <div class="row justify-content-center mb-4">
+          <!-- ฝั่งซ้าย: ข้อมูลร้าน -->
+          <div class="col-12 col-md-6 mb-3 mb-md-0 d-flex flex-column justify-content-center">
+            <h3 class="fw-bold text-black" style="letter-spacing:2px;">ยินดีต้อนรับ <span
+                class="text-secondary">ครัวไทยโฮมเมด</span></h3>
+            <h5 class="text-secondary fst-italic">(Thai Homemade Kitchen)</h5>
+            <p class="text-black mb-0">ร้านอาหารไทยต้นตำรับ รสชาติเข้มข้น เหมือนทำเองที่บ้าน</p>
+          </div>
+          <!-- ฝั่งขวา: ที่อยู่, เบอร์, เวลาเปิดปิด -->
+          <div class="col-12 col-md-6">
+            <div class="info-item mb-3">
+              <h4 class="mb-2 fw-bold text-secondary">
+                <i class="fas fa-map-marker-alt me-2"></i>ที่อยู่
+              </h4>
+              <div class="text-black">
+                <p class="mb-0 text-dark">123/45 ถนนรัชดาภิเษก แขวงดินแดง เขตดินแดง กรุงเทพมหานคร 10400</p>
+                <p class="mb-0 text-dark">เบอร์โทรศัพท์ : 02-123-4567</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <h4 class="mb-2 text-primary fw-bold text-secondary">
+                <i class="fas fa-clock me-2"></i>เปิด / ปิด
+              </h4>
+              <div class="text-black">
+                <ul class="list-unstyled mb-0">
+                  <li><span class="fw-semibold text-dark">วันจันทร์</span> : 08:00 - 22:00</li>
+                  <li><span class="fw-semibold text-dark">วันอังคาร</span> : 08:00 - 22:00</li>
+                  <li><span class="fw-semibold text-dark">วันพุธ</span> : 08:00 - 22:00</li>
+                  <li><span class="fw-semibold text-dark">วันพฤหัสบดี</span> : 08:00 - 22:00</li>
+                  <li><span class="fw-semibold text-dark">วันศุกร์</span> : 08:00 - 23:00</li>
+                  <li><span class="fw-semibold text-dark">วันเสาร์</span> : 08:00 - 23:00</li>
+                  <li><span class="fw-semibold text-dark">วันอาทิตย์</span> : 08:00 - 22:00</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -29,6 +65,3 @@
   <script src="assets/js/app.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
-
-</html>
-

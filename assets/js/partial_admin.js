@@ -20,7 +20,7 @@ class MyHeader extends HTMLElement {
 						<div class="search-mobile-trigger col">
 						<div class="row justify-content-between align-items-center">
 							<div class="col text-end">
-								<h4 class="text-danger pt-1">ครัวไทยโฮมเมด</h4>
+								<h4 class="text-danger pt-1">Thai Homemade Kitchen</h4>
 							</div>
 						</div>
 						</div><!--//col-->
@@ -37,7 +37,7 @@ class MyHeader extends HTMLElement {
 				<a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 				<div class="app-branding">
 					<a class="app-logo" href="./index.html"><img class="logo-icon me-2" src="../assets/images/app-logo.svg"
-							alt="logo"><span class="logo-text">Main Menu</span></a>
+							alt="logo"><span class="logo-text">Home</span></a>
 				</div><!--//app-branding-->
 
 				<nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
