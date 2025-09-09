@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hackathon 2025</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/portal.css">
+  <link rel="stylesheet" href="assets/css/all.min.css">
+</head>
+
+<body class="app">
+
+  <my-header></my-header>
+
+  <div class="app-wrapper">
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+      <div class="container-xl">
+        <h1 class="text-center">สั่งซื้อสินค้า</h1>
+        <div id="data_area" class="row justify-content-center bg-white py-2 rounded-md">
+          <form id="form-order">
+            <div class="mb-3">
+              <label for="name" class="form-label">ชื่อ-นามสกุล</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="address" class="form-label">ที่อยู่</label>
+              <textarea class="form-control" id="address" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">เบอร์โทรศัพท์</label>
+              <input type="text" class="form-control" id="phone" required>
+            </div>
+            <button type="submit" class="btn btn-primary text-white d-block mx-auto my-5">ยืนยันการสั่งซื้อ</button>
+            <p class="text-center text-danger d-none" id="warning">
+              *** กรุณาตรวจสอบความถูกต้องของข้อมูลก่อนยืนยันการสั่งซื้อ ***
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/partial.js"></script>
+  <script src="assets/js/all.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+
+
+<script>
+  document.getElementById('form-order').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    if (name === '' || address === '' || phone === '') {
+      document.getElementById('warning').classList.remove('d-none');
+      return;
+    }
+    const items = JSON.parse(sessionStorage.getItem('basket')) || [];
+    if (items.length === 0) {
+      alert('ไม่มีรายการอาหารในตะกร้า');
+      return;
+    }
+    // Generate a random order id
+    const orderId = 'order_' + Math.random().toString(36).substr(2, 9) + Date.now();
+    const thaiDate = new Date().toLocaleString('en-GB', { timeZone: 'Asia/Bangkok' });
+    const order = {
+      id: orderId,
+      name: name,
+      address: address,
+      phone: phone,
+      date: thaiDate,
+      items: items
+    };
+
+    // ส่งข้อมูล order ไปยังเซิร์ฟเวอร์ (ตัวอย่างใช้ fetch)
+    fetch('http://54.169.154.143:3096/food-orders', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(order)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success:', data);
+        // ล้างตะกร้าหลังจากสั่งซื้อสำเร็จ
+        sessionStorage.removeItem('basket');
+        alert('สั่งซื้อสำเร็จ ขอบคุณที่ใช้บริการ!');
+        window.location.href = 'food.html'; // กลับไปหน้าเลือกอาหาร
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('เกิดข้อผิดพลาดในการสั่งซื้อ กรุณาลองใหม่อีกครั้ง');
+      });
+      
+  });
+</script>
